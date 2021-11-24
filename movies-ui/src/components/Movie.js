@@ -8,7 +8,7 @@ function Movie({ movie, onDelete, onEdit }) {
             <td>{movie.year}</td>
             <td>{movie.language}</td>
             <td><MdEdit onClick={ () => onEdit(movie) }/></td>
-            <td><MdDeleteForever onClick={ () => onDelete(movie._id)}/></td>
+            <td><MdDeleteForever onClick={ () => onDelete(movie._id) }/></td>
         </tr>
     );
 }

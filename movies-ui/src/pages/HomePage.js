@@ -4,7 +4,7 @@ import MovieList from '../components/MovieList';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-function HomePage(setMovieToEdit) {
+function HomePage({setMovieToEdit}) {
     const [movies, setMovies] = useState([]);
     const history = useHistory();
 
@@ -32,6 +32,7 @@ function HomePage(setMovieToEdit) {
     useEffect(() => {
         loadMovies();
     }, []);
+
     return (
         <>
             <h2>List of Movies</h2>

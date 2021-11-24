@@ -69,7 +69,7 @@ const findMovies = async (filter, projection, limit) => {
 const replaceMovie = async (_id, title, year, language) => {
     const result = await Movie.replaceOne({ _id: _id },
         { title: title, year: year, language: language });
-    return result.nModified;
+    return result.modifiedCount;
 }
 
 

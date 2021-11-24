@@ -88,7 +88,7 @@ app.put('/movies/:_id', (req, res) => {
  * Delete the movie whose id is provided in the query parameters
  */
 app.delete('/movies/:_id', (req, res) => {
-    movies.deleteById(req.params.id)
+    movies.deleteById(req.params._id)
         .then(deletedCount => {
             if (deletedCount === 1) {
                 res.status(204).send();
